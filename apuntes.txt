@@ -1,3 +1,13 @@
+Páginas del proyecto:
+
+- Index
+- Contacto
+- Post
+- Nosotros
+
+------------------------------------------------------------------------------------
+Paleta colores:
+
 https://coolors.co/palette/d0b8ac-f3d8c7-efe5dc-fbfefb
 
 ------------------------------------------------------------------------------------
