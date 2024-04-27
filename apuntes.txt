@@ -6,6 +6,19 @@ Páginas del proyecto:
 - Nosotros
 
 ------------------------------------------------------------------------------------
+Formulario:
+
+- texto: nombre
+- texto: apellido
+- mail: mail
+- num: telefono
+- cal: fecha nac
+- check: intereses: 
+	- dos agujas
+	- crochet
+	- telar
+
+------------------------------------------------------------------------------------
 Paleta colores:
 
 https://coolors.co/palette/d0b8ac-f3d8c7-efe5dc-fbfefb
