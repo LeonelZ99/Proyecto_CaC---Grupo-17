@@ -1,0 +1,31 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    background-color: #252836;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    min-height: 100vh;
+    /* Establece la altura mínima del contenedor al 100% del viewport height */
+    display: flex;
+    /* Usa flexbox para el diseño */
+    flex-direction: column;
+    /* Organiza los elementos en columna */
+}
+
+.header {
+    background-color: rgba(202, 68, 239, 0.703);
+    padding: 50px;
+}
+
+.footer {
+    background-color: rgb(202, 68, 239, 0.703);
+    padding: 70px;
+    margin-top: auto;
+}
