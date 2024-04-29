@@ -4,6 +4,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Estilos del titulo */
+
 header {
     background-color: #181817;
     padding-top: 2vh;
@@ -16,11 +18,13 @@ h1  {
   font-family: "Leckerli One", cursive;
   font-weight: 400;
   font-style: normal;
-  color: #F3D8C7;
+  color: #EFE5DC;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #F3D8C7;
+  border-bottom: 1px solid #EFE5DC;
 }
+
+/* Estilos del contenido */
 
 main {
     min-height: 80vh;
@@ -28,17 +32,21 @@ main {
     padding: 0;
 }
 
-footer {
-    background-color: #181817;
-    color: #F3D8C7;
-    padding: 2vh 0;
-}
+/* Estilos del nav para muestra */
 
 .nav {
     text-align: center;
     margin: 0;
     padding: 2vh 0;
-    color: #F3D8C7;
+    color: #EFE5DC;
+}
+
+/* Estilos del footer */
+
+footer {
+    background-color: #181817;
+    color: #EFE5DC;
+    padding: 2vh 0;
 }
 
 .content-footer p {
@@ -49,9 +57,12 @@ footer {
 
 .content-footer > :first-child {
 
-    border-bottom: 1px solid #F3D8C7;
+    border-bottom: 1px solid #EFE5DC;
 
 }
+
+
+/* Media querys */
 
 @media screen and (max-width: 767px) {
 
