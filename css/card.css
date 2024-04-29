@@ -1,0 +1,17 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Ajusta el espacio entre las tarjetas */
+    margin: 0 -10px;
+    /* Elimina el espacio horizontal extra */
+}
+
+.card {
+    flex-basis: calc(25% - 20px);
+    /* Establece el ancho de las tarjetas */
+    margin: 10px;
+    /* Margen entre las tarjetas */
+    box-sizing: border-box;
+    /* Incluye el borde y el padding en el ancho de la tarjeta */
+}

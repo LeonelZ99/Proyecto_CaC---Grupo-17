@@ -4,7 +4,7 @@ html {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: aliceblue;
-    background-color: #252836;
+    background-color: #fbfefb;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -20,12 +20,12 @@ html {
 }
 
 .header {
-    background-color: rgba(202, 68, 239, 0.703);
+    background-color: #d0b8ac;
     padding: 50px;
 }
 
 .footer {
-    background-color: rgb(202, 68, 239, 0.703);
+    background-color: #d0b8ac;
     padding: 70px;
     margin-top: auto;
 }
