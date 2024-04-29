@@ -1,0 +1,56 @@
+.leckerli {
+  font-family: "Leckerli One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #FBFEFB;
+}
+
+header {
+    background-color: #181817;
+    padding-top: 2vh;
+}
+
+
+h1  {
+  text-align: center;
+  font-size: calc(1.5rem + 3vw); 
+  font-family: "Leckerli One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #F3D8C7;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+    min-height: 80vh;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    color: #F3D8C7;
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .container {
+     width:100%;
+     margin: 0 auto;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .container{
+      width:90%;
+      margin: 0 auto;
+  }
+
+}

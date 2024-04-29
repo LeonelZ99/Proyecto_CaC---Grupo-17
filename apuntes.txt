@@ -23,6 +23,8 @@ Paleta colores:
 
 https://coolors.co/palette/d0b8ac-f3d8c7-efe5dc-fbfefb
 
+Fondo titulo: #181817
+
 ------------------------------------------------------------------------------------
 
 Fuente:
