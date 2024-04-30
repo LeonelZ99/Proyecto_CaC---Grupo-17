@@ -70,6 +70,8 @@ footer {
 
 /* Media querys */
 
+/* Movil */
+
 @media screen and (max-width: 767px) {
 
     main {
@@ -80,6 +82,8 @@ footer {
     }
 
 }
+
+/* Tablet */
 
 @media screen and (min-width: 768px) {
 
@@ -92,6 +96,8 @@ footer {
 
 }
 
+/* Monitor de 1024px a 1440px */
+
 @media screen and (min-width: 1024px) {
 
     main {
@@ -103,6 +109,7 @@ footer {
 
 }
 
+/* Monitor a partir de 1441px */
 
 @media screen and (min-width: 1441px) {
 
