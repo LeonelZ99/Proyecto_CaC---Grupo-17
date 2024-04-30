@@ -1,3 +1,5 @@
+/*Estilos generales para todos los media querys*/
+
 body {
     margin: 0;
     background-color: #FBFEFB;
@@ -30,11 +32,13 @@ main {
     min-height: 80vh;
     margin: 0;
     padding: 0;
+    /*Este color de fondo no va en el diseño final*/
+    background-color: #EFE5DC;
 }
 
 /* Estilos del nav para muestra */
 
-.nav {
+.menu {
     text-align: center;
     margin: 0;
     padding: 2vh 0;
@@ -55,6 +59,8 @@ footer {
     padding: 2vh 0;
 }
 
+/* linea del footer*/
+
 .content-footer > :first-child {
 
     border-bottom: 1px solid #EFE5DC;
@@ -68,6 +74,9 @@ footer {
 
     main {
         width:100%;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
     }
 
 }
@@ -76,24 +85,42 @@ footer {
 
   main {
      width:100%;
+     display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-around;
   }
 
 }
 
 @media screen and (min-width: 1024px) {
 
+    main {
+        width:100%;
+        display: grid;
+         grid-template-columns: auto auto auto;
+         justify-content: space-around;
+     }
+
+}
+
+
+@media screen and (min-width: 1441px) {
+
   main {
-      width:90%;
+      width:80%;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      justify-content: space-around;
   }
 
   .content-footer {
-    width:90%;
+    width:80%;
     margin: 0 auto;
   }
 
   h1 {
-    width:90%;
+    width:80%;
     margin: 0 auto;
   }
 
