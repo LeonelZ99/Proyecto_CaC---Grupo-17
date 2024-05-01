@@ -45,7 +45,7 @@ CSS:
 
 Responsive:
 
-@media screen and (max-width: 767px)
-@media screen and (min-width: 768px)
+@media screen and (max-width: 719px)
+@media screen and (min-width: 720px)
 @media screen and (min-width: 1024px)
 @media screen and (min-width: 1441px)
