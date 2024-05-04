@@ -1,0 +1,74 @@
+main {
+    min-height: 80vh; /* ver si hace falta*/
+    padding: 0;
+    display: grid;
+    /*Este color de fondo no va en el diseño final*/
+   /*  background-color: #552a04; */
+}
+
+/* Media querys */
+
+/* Movil menor a 719px*/
+
+@media screen and (max-width: 719px) {
+
+    main {
+        width:100%;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+}
+
+/* Tablet desde 720px a 1023px*/
+
+@media screen and (min-width: 720px) {
+
+  main {
+     width:100%;
+     display: grid;
+     grid-template-columns: auto auto;
+     justify-content: space-around;
+  }
+
+}
+
+/* Monitor de 1024px a 1440px */
+
+@media screen and (min-width: 1024px) {
+
+    main {
+     width:100%;
+     display: grid;
+     grid-template-columns: auto auto auto;
+     justify-content: space-around;
+     }
+
+}
+
+/* Monitor a partir de 1441px */
+
+@media screen and (min-width: 1441px) {
+
+  main {
+      width:80%;
+      margin: 3vh auto;
+      /* margin: 3vh 0; */
+     /*  display: grid; */
+      grid-template-columns: auto auto auto auto;
+     justify-content: space-around;
+      /* row-gap: 3vh; */
+  }
+
+  .content-footer {
+    width:80%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    width:80%;
+    margin: 0 auto;
+  }
+
+}
