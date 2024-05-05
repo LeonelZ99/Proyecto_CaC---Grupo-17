@@ -27,7 +27,7 @@ a {
 
 /* Tablet desde 720px a 1023px*/
 
-@media screen and (min-width: 721px) {
+@media screen and (min-width: 650px) {
 
   main {
      width:100%;
