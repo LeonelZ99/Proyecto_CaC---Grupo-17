@@ -10,7 +10,7 @@ body {
 
 header {
     background-color: #181817;
-    padding-top: 2vh;
+    padding-top: 6vh;
 }
 
 
@@ -26,15 +26,6 @@ h1  {
   border-bottom: 1px solid #EFE5DC;
 }
 
-/* Estilos del contenido */
-
-main {
-    min-height: 80vh; /* ver si hace falta*/
-   /*  margin: 3vh 0; */
-    padding: 0;
-    /* display: grid; */
-}
-
 /* Estilos del nav para muestra */
 
 .menu {
@@ -44,6 +35,15 @@ main {
     color: #EFE5DC;
 }
 
+/* Estilos del contenido */
+
+main {
+
+    margin: 6vh 0;
+    padding: 0;
+
+}
+
 /* Estilos del footer */
 
 footer {
@@ -51,6 +51,10 @@ footer {
     color: #EFE5DC;
     padding: 2vh 0;
 }
+
+.content-footer p:nth-child(2) {
+    margin-bottom: 9vh;
+  }
 
 .content-footer p {
     text-align: center;
