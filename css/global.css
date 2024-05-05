@@ -21,8 +21,10 @@ h1  {
   font-weight: 400;
   font-style: normal;
   color: #EFE5DC;
+  line-height: 1;
   margin: 0;
   padding: 0;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid #EFE5DC;
 }
 

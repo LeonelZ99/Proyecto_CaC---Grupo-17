@@ -2,8 +2,9 @@ main {
 
     display: grid;
     row-gap: 3vh;
-    /*Este color de fondo no va en el diseño final*/
-   /*  background-color: #552a04; */
+    grid-template-columns: auto;
+    justify-content: center;
+
 }
 
 a {
@@ -14,7 +15,7 @@ a {
 
 /* Movil menor a 719px*/
 
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 520px) {
 
     main {
         width:100%;
@@ -26,7 +27,7 @@ a {
 
 /* Tablet desde 720px a 1023px*/
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 721px) {
 
   main {
      width:100%;
