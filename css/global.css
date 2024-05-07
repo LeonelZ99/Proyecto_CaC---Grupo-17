@@ -25,17 +25,83 @@ h1  {
   margin: 0;
   padding: 0;
   padding-bottom: 20px;
-  border-bottom: 1px solid #EFE5DC;
+  border-bottom: 1px solid #D0B8AC;
 }
 
 /* Estilos del nav para muestra */
 
 .menu {
+    font-size: 1.3rem;
     text-align: center;
     margin: 0;
     padding: 2vh 0;
-    color: #EFE5DC;
 }
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .menu li {
+
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+  }
+  
+  .menu li a {
+    display: block;
+    color: #D0B8AC;
+    /* text-align: center; */
+    
+   /*  padding: 2px 15px; */
+    /* padding: 3px 17px; */
+    text-decoration: none;
+  }
+
+  .active {
+
+  /*   padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 15px; */
+   /*  padding: 2px 15px; */
+    border-bottom: 1px solid;
+    border-color:#D0B8AC;
+}
+
+
+  .menu li a:hover {
+
+   /*  padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 15px; */
+   /*  padding: 2px 15px; */
+    border-bottom: 1px solid;
+    border-color:#D0B8AC;
+  
+}
+
+
+
+/* .menu span {
+
+    color:#FBFEFB;
+} */
+
+/* .menu:hover {
+
+    color:  #FBFEFB;
+
+} */
 
 /* Estilos del contenido */
 
@@ -68,6 +134,6 @@ footer {
 
 .content-footer > :first-child {
 
-    border-bottom: 1px solid #EFE5DC;
+    border-bottom: 1px solid #D0B8AC;
 
 }
