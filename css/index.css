@@ -11,6 +11,12 @@ a {
   text-decoration: none;
 }
 
+main a div {
+  
+  box-shadow: 5px 5px 10px #EFE5DC;
+
+}
+
 /* Media querys */
 
 /* Movil menor a 719px*/
