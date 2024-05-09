@@ -46,7 +46,7 @@ h1  {
     overflow: hidden;
   }
 
-  .menu li {
+.menu li {
 
     display: inline-block;
     padding-top: 1px;
@@ -56,7 +56,7 @@ h1  {
 
   }
   
-  .menu li a {
+.menu li a {
     display: block;
     color: #D0B8AC;
     /* text-align: center; */
@@ -66,48 +66,26 @@ h1  {
     text-decoration: none;
   }
 
-  .active {
+.active {
 
-  /*   padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 15px;
-    padding-right: 15px; */
-   /*  padding: 2px 15px; */
     border-bottom: 1px solid;
     border-color:#D0B8AC;
 }
 
 
-  .menu li a:hover {
+.menu li a:hover {
 
-   /*  padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 15px;
-    padding-right: 15px; */
-   /*  padding: 2px 15px; */
+    color: #EFE5DC;
     border-bottom: 1px solid;
-    border-color:#D0B8AC;
+    border-color:#EFE5DC;
   
 }
-
-
-
-/* .menu span {
-
-    color:#FBFEFB;
-} */
-
-/* .menu:hover {
-
-    color:  #FBFEFB;
-
-} */
 
 /* Estilos del contenido */
 
 main {
 
-    margin: 6vh 0;
+    margin: 8vh 0;
     padding: 0;
 
 }
@@ -120,6 +98,14 @@ footer {
     padding: 2vh 0;
 }
 
+/* linea del footer*/
+
+.content-footer > :first-child {
+
+  border-bottom: 1px solid #D0B8AC;
+
+}
+
 .content-footer p:nth-child(2) {
     margin-bottom: 9vh;
   }
@@ -130,10 +116,3 @@ footer {
     padding: 2vh 0;
 }
 
-/* linea del footer*/
-
-.content-footer > :first-child {
-
-    border-bottom: 1px solid #D0B8AC;
-
-}

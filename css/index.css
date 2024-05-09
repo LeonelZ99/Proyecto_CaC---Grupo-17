@@ -1,5 +1,6 @@
-main {
 
+main {
+    width:100%;
     display: grid;
     row-gap: 3vh;
     grid-template-columns: auto;
@@ -11,6 +12,8 @@ a {
   text-decoration: none;
 }
 
+/* Sombras de las tarjetas*/
+
 main a div {
   
   box-shadow: 5px 5px 10px #EFE5DC;
@@ -18,18 +21,6 @@ main a div {
 }
 
 /* Media querys */
-
-/* Movil menor a 719px*/
-
-@media screen and (max-width: 520px) {
-
-    main {
-        width:100%;
-        grid-template-columns: auto;
-        justify-content: center;
-    }
-
-}
 
 /* Tablet desde 720px a 1023px*/
 
