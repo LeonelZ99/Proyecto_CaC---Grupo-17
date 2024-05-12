@@ -1,11 +1,23 @@
-.card-img-top{
-  width: 100%;
-  height: 100%;
+.card-post{
+  width: 50%;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-
+.post{
+  text-align: center;
+}
 
 /* Media querys */
+
+@media screen and (max-width: 650px) {
+
+ .card-post{
+  width: 80%;
+ }
+
+}
 
 @media screen and (min-width: 1441px) {
 
