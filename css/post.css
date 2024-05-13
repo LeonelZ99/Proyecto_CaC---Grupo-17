@@ -1,13 +1,45 @@
 .card-post{
   width: 50%;
   height: auto;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
+  box-shadow: 15px 15px 10px #39383729;
 }
 
 .post{
   text-align: center;
 }
+.titulo-img{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+
+/* Estilos para la descripción */
+.post-description {
+  font-family: 'Arial', sans-serif;
+  color: #666; 
+  font-size: 21px; 
+  line-height: 1.5; 
+}
+
+/* Estilos para la imagen */
+.card-post {
+  transition: transform 2.3s ease; /* Agrega una transición suave a la propiedad transform */
+}
+
+/* Aplica la rotación horizontal cuando se pasa el mouse sobre la imagen */
+.card-post:hover {
+  transform: rotateY(90deg); /* Rota la imagen horizontalmente 180 grados */
+}
+
+
+
+
+
+
+
 
 /* Media querys */
 
