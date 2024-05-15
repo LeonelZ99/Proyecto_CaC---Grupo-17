@@ -34,9 +34,13 @@
   transform: rotateY(90deg); /* Rota la imagen horizontalmente 180 grados */
 }
 
+/*Corrige salto de 1px en menú al hace hover y no haber ningún borde en los enlaces*/
 
+.menu li a {
 
-
+  border-bottom: 1px solid;
+  border-color: #181817;
+}
 
 
 
