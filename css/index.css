@@ -17,6 +17,13 @@ a {
 main a div {
   
   box-shadow: 5px 5px 10px #EFE5DC;
+  transition: opacity 0.20s ease;
+
+}
+
+main a div:hover {
+
+  opacity: 0.7;
 
 }
 
