@@ -1,6 +1,40 @@
+main {
+  text-align: center;
+}
 
+main p {
+
+  margin: 0px 5vw 60px;
+
+}
+
+.fotos-nosotros {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.fotos-nosotros img {
+
+  margin: 10px;
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #181817;
+
+}
 
 /* Media querys */
+
+@media screen and (min-width: 1024px) {
+
+  .fotos-nosotros {
+
+    justify-content: space-evenly;
+
+  }
+
+}
 
 @media screen and (min-width: 1441px) {
 
@@ -8,10 +42,10 @@
         width:80%;
         margin-left: auto;
         margin-right: auto;
-        grid-template-columns: auto auto auto auto;
-       justify-content: space-around;
     }
   
+    
+
     .content-footer {
       width:80%;
       margin: 0 auto;
