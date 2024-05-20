@@ -15,7 +15,7 @@
 - [X] Página responsive con 3 media querys.
 - [x] Animación, transformación o transición.
 - [x] Usar Flexbox y/o Grid.
-- [ ] Presentación, legibilidad, favicon.
+- [x] Presentación, legibilidad, favicon.
 - [x] Repositorio GIT.
 - [x] Página on-line.
 - [ ] Etiquetas semánticas, validación W3C.
