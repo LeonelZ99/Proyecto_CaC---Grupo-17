@@ -18,10 +18,19 @@ window.addEventListener('load', ()=>{
         if (!validNombre){
             console.log('Ingrese su Nombre')
             alert ('Ingrese su nombre');
-            // validError(nombre, 'Ingrese su nombre')
+            
         }else{
             console.log(validNombre)
         }
+
+        if (!validApellido){
+            console.log('Ingrese su Apellido')
+            alert ('Ingrese su apellido');
+            
+        }else{
+            console.log(validApellido)
+        }
+
     }
 })
 
