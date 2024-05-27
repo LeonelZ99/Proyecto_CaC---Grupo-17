@@ -43,7 +43,7 @@
     <main>
         <!-- Formulario de Contacto -->
         <section id="formm-contact">
-            <div class="container">
+            <class class="container">
                 <div class="mb-6">
                     <h2 class="display-3 text-center mx-auto"> Contactanos </h2>
                 </div>
@@ -106,17 +106,96 @@
                     <!-- CAMPO TEXTO -->
 
                     <div class="form-floating mb-5">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                        <textarea class="form-control" id="floatingTextarea2"
                             style="height: 100px"></textarea>
                         <label for="floatingTextarea2">Escribinos</label>
                     </div>
 
                     <!-- BOTON -->          
                     <div class="d-grid gap-2 col-6 mt-4 mb-4 mx-auto">
-                        <button class="btn btn-primary" >ENVIAR</button>
+                        <button class="btn btn-primary" id="boton" onclick="Enviar()" >ENVIAR</button>
                     </div>
 
+                    
+
                 </form>
+            </class>
+            
+            
+                <!-- ventana modal de registro -->
+                <button type="button" class="btn btn-primary position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Registrate</button>
+                
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Registrate!</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        
+                        <div class="modal-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="recipient-name" class="col-form-label">Nombre: </label>
+                              <input type="text" class="form-control" id="recipient-name">
+                            </div>
+
+                                
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label">Apellido:</label>
+                              <input type="text" class="form-control" id="recipient-lastname">
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-campos">
+                                    <label for="date">FECHA DE NACIMIENTO</label>
+                                    <input type="date" name="date" required id="date">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-intereses">
+                                    <div class="items">
+                                        <div class="form-check" >
+                                            <input  class="form-check-input" type="checkbox" name="crochet" id="items" value="">
+                                            <label class="form-check-label" for="flexCheckDefault"> Crochet</label>
+                                        </div>
+                
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="DosAgujas" id="items" value="">
+                                            <label class="form-check-label" for="flexCheckDefault">Dos Agujas</label>
+                                        </div>
+                
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="Telar" id="items"  value="">
+                                            <label class="form-check-label" for="flexCheckDefault"> Telar </label>
+                                        </div>
+                
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">E-MAIL</label>
+                                <span class="input-group-text" id="addon-wrapping">@</span>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email" required id="email">
+                            </div>
+                           
+
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+
+
+                
             </div>
         </section>
 
