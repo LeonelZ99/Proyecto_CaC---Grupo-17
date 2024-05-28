@@ -4,7 +4,7 @@ window.addEventListener('load', ()=>{
     const apellido = document.getElementById('floatingInputGridApe');
     const email = document.getElementById('floatingInputGridmail');
     const texto = document.getElementById('floatingTextarea2');
-
+    const menu =  document.getElementById('floatingSelectGrid');
     form.addEventListener('submit', (e)=>{
         e.preventDefault();
         validaCampos()
@@ -15,6 +15,7 @@ window.addEventListener('load', ()=>{
         const validApellido = apellido.value;
         const validEmail = email.value;
         const validText = texto.value;
+        const validMenu = menu.value;
 
         if (!validNombre){
             console.log('Ingrese su Nombre')
@@ -40,12 +41,21 @@ window.addEventListener('load', ()=>{
             console.log(validEmail)
         }
 
+        if(validMenu === "Seleccioná una opción"){
+            console.log('Seleccione una opcion');
+            alert ('Seleccione una opcion');
+        }else{
+            console.log(validMenu)
+        }
+
         if (!validText){
             console.log('Ingrese su Texto')
             alert ('Escriba su Mensaje');
             
         }else{
-            console.log(validText)
+            alert('formulario enviado');
+
+            //console.log(validText)
         }
     }
 
