@@ -1,4 +1,3 @@
-
 // Importamos el modulo express y mysql
 const express = require("express");
 const mysql = require("mysql2");
@@ -99,20 +98,97 @@ app.post('/prenda', upload.single('imagen'), (req, res) => {
     });
 });
 
-// Ruta para eliminar una prenda por su id
+// Ruta para eliminar una prenda por id
 app.delete('/prenda/:id', (req, res) => {
     const prendaId = req.params.id;
-    const query = 'DELETE FROM prenda WHERE id_prenda = ?';
-    db.query(query, [prendaId], (err, result) => {
+    // Primero obtenemos la prenda para conocer el nombre de la imagen
+    const getQuery = 'SELECT imagen FROM prenda WHERE id_prenda = ?';
+    db.query(getQuery, [prendaId], (err, results) => {
         if (err) {
-            console.error('Error al eliminar la prenda:', err);
+            console.error('Error al obtener la prenda:', err);
             res.status(500).send('Error al eliminar la prenda');
             return;
         }
-        res.status(200).json({ message: 'Prenda eliminada correctamente' });
+        if (results.length === 0) {
+            res.status(404).send('Prenda no encontrada');
+            return;
+        }
+        const imagen = results[0].imagen;
+        // Eliminamos la prenda de la base de datos
+        const deleteQuery = 'DELETE FROM prenda WHERE id_prenda = ?';
+        db.query(deleteQuery, [prendaId], (err, results) => {
+            if (err) {
+                console.error('Error al eliminar la prenda:', err);
+                res.status(500).send('Error al eliminar la prenda');
+                return;
+            }
+            // Luego eliminamos la imagen del sistema de archivos
+            const imgPath = path.join(imgFolder, imagen);
+            fs.unlink(imgPath, (err) => {
+                if (err) {
+                    console.error('Error al eliminar la imagen:', err);
+                    res.status(500).send('Prenda eliminada pero ocurrió un error al eliminar la imagen');
+                    return;
+                }
+                res.status(200).json({ message: 'Prenda e imagen eliminadas exitosamente' });
+            });
+        });
     });
 });
 
+// Ruta para actualizar una prenda
+app.put('/prenda/:id', upload.single('imagen'), (req, res) => {
+    const prendaId = req.params.id;
+    const { nombre, descripcion, categoria_id, autor_id } = req.body;
+
+    // Primero obtenemos la prenda actual para conocer el nombre de la imagen actual
+    const getQuery = 'SELECT imagen FROM prenda WHERE id_prenda = ?';
+    db.query(getQuery, [prendaId], (err, results) => {
+        if (err) {
+            console.error('Error al obtener la prenda:', err);
+            res.status(500).send('Error al actualizar la prenda');
+            return;
+        }
+        if (results.length === 0) {
+            res.status(404).send('Prenda no encontrada');
+            return;
+        }
+        
+        const currentImage = results[0].imagen;
+        let updateQuery = 'UPDATE prenda SET nombre = ?, descripcion = ?, categoria_id = ?, autor_id = ?';
+        let queryParams = [nombre, descripcion, categoria_id, autor_id];
+
+        if (req.file) {
+            updateQuery += ', imagen = ?';
+            queryParams.push(req.file.filename);
+        }
+
+        updateQuery += ' WHERE id_prenda = ?';
+        queryParams.push(prendaId);
+
+        db.query(updateQuery, queryParams, (err, results) => {
+            if (err) {
+                console.error('Error al actualizar la prenda:', err);
+                res.status(500).send('Error al actualizar la prenda');
+                return;
+            }
+
+            if (req.file) {
+                // Si hay una nueva imagen, eliminamos la imagen antigua
+                const imgPath = path.join(imgFolder, currentImage);
+                fs.unlink(imgPath, (err) => {
+                    if (err) {
+                        console.error('Error al eliminar la imagen antigua:', err);
+                        res.status(500).send('Prenda actualizada pero ocurrió un error al eliminar la imagen antigua');
+                        return;
+                    }
+                });
+            }
+
+            res.json({ message: 'Prenda actualizada exitosamente' });
+        });
+    });
+});
 
 
 // Inicializacion del servidor

@@ -1,30 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const prendaId = urlParams.get('id');
-    console.log(prendaId);
-
-    if (!prendaId) {
-        console.error('ID de prenda no encontrado en la URL');
-        
-        // window.location.href = './index.html';
-        return;
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    const prendaId = new URLSearchParams(window.location.search).get('id');
 
     fetch(`http://localhost:3000/prenda/${prendaId}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('No se encontró la prenda');
-            }
-            return response.json();
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('nombrePrenda').textContent = data.nombre;
+            document.getElementById('imagenPrenda').src = `./img/${data.imagen}`;
+            document.getElementById('descripcionPrenda').textContent = data.descripcion;
+            document.getElementById('categoriaPrenda').textContent = data.categoria_id;
+            document.getElementById('autorPrenda').textContent = data.autor_id;
         })
-        .then(prenda => {
-            // Actualiza el contenido HTML con los datos de la prenda
-            document.getElementById('nombrePrenda').textContent = prenda.nombre;
-            document.getElementById('imagenPrenda').src = `./img/${prenda.imagen}`;
-            document.getElementById('descripcionPrenda').textContent = prenda.descripcion;
-            document.getElementById('categoriaPrenda').textContent = `Categoría: ${prenda.categoria}`;
-            document.getElementById('autorPrenda').textContent = `Autor: ${prenda.autor}`;
-            
-        })
-        .catch(error => console.error('Error al obtener los detalles de la prenda:', error));
+        .catch(error => console.error('Error al obtener la prenda:', error));
+
+    document.getElementById('deleteButton').addEventListener('click', function() {
+        if (confirm('¿Estás seguro de que deseas eliminar esta prenda?')) {
+            fetch(`http://localhost:3000/prenda/${prendaId}`, {
+                method: 'DELETE'
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Prenda eliminada exitosamente');
+                window.location.href = './index.html';
+            })
+            .catch(error => {
+                console.error('Error al eliminar la prenda:', error);
+                alert('Error al eliminar la prenda');
+            });
+        }
+    });
 });

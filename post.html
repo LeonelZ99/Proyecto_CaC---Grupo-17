@@ -44,8 +44,36 @@
                 <p id="descripcionPrenda" class="post-description"></p>
                 <p id="categoriaPrenda"></p>
                 <p id="autorPrenda"></p>
+                <button id="deleteButton" class="btn btn-danger">Eliminar Prenda</button>
+                <button id="editButton" class="btn btn-warning">Editar Prenda</button>
             </div>
         </div>
+         <!-- Formulario de edición oculto -->
+         <div class="post" id="editFormContainer" style="display: none;">
+            <h2>Editar Prenda</h2>
+            <form id="editForm" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="editNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="editNombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="editDescripcion" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="editDescripcion" name="descripcion" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="editCategoria_id" class="form-label">Categoría ID</label>
+                    <input type="text" class="form-control" id="editCategoria_id" name="categoria_id" required>
+                </div>
+                <div class="mb-3">
+                    <label for="editAutor_id" class="form-label">Autor ID</label>
+                    <input type="text" class="form-control" id="editAutor_id" name="autor_id" required>
+                </div>
+                <div class="mb-3">
+                    <label for="editImagen" class="form-label">Imagen (opcional)</label>
+                    <input type="file" class="form-control" id="editImagen" name="imagen" accept="image/*">
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            </form>
     </main>
 
     <footer>
@@ -56,5 +84,6 @@
     </footer>
 
     <script src="./js/post.js"></script>
+    <script src="./js/modificarPrenda.js"></script>
 </body>
 </html>
