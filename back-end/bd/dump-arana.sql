@@ -52,7 +52,7 @@ CREATE TABLE `categoria` (
   `id_cat` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   PRIMARY KEY (`id_cat`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,7 +61,7 @@ CREATE TABLE `categoria` (
 
 LOCK TABLES `categoria` WRITE;
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
-INSERT INTO `categoria` VALUES (1,'gorros'),(2,'pullover');
+INSERT INTO `categoria` VALUES (1,'Ropa'),(2,'Accesorios'),(3,'Calcetines'),(4,'Muñecos');
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -97,17 +97,18 @@ DROP TABLE IF EXISTS `prenda`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `prenda` (
-  `id_prenda` int NOT NULL,
+  `id_prenda` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `descripcion` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `categoria_id` int NOT NULL,
   `autor_id` int NOT NULL,
+  `imagen` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_prenda`),
   KEY `prenda_categoria_FK` (`categoria_id`),
   KEY `prenda_autor_FK` (`autor_id`),
   CONSTRAINT `prenda_autor_FK` FOREIGN KEY (`autor_id`) REFERENCES `autor` (`id_autor`),
   CONSTRAINT `prenda_categoria_FK` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id_cat`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,7 +117,7 @@ CREATE TABLE `prenda` (
 
 LOCK TABLES `prenda` WRITE;
 /*!40000 ALTER TABLE `prenda` DISABLE KEYS */;
-INSERT INTO `prenda` VALUES (1,'Gorro de lana','Gorro de lana hecho a mano',1,1),(2,'Pullover de algodon','Pullover comodo y ligero',2,2),(3,'Gorro de invierno','Gorro con forro polar',1,1),(4,'Pullover de lana','Pullover grueso para invierno',2,3);
+INSERT INTO `prenda` VALUES (1,'Boina Marrón','Boina tejida de color marrón',1,1,'boina-marron.jpg'),(2,'Bufanda Queen','Bufanda tejida con diseño inspirado en Queen',2,1,'bufanda-queen.jpg'),(3,'Chal Triangular','Chal triangular tejido de varios colores',1,2,'chal-triangular.jpg'),(4,'Gorro Bicolor','Gorro tejido bicolor',1,3,'gorro-bicolor.jpg'),(5,'Gorro Lavanda','Gorro tejido de color lavanda',1,2,'gorro-lavanda.jpg'),(6,'Gorro Rana','Gorro tejido con diseño de rana',1,1,'gorro-rana.jpeg'),(7,'Gorro Verde','Gorro tejido de color verde',1,1,'gorro-verde.jpg'),(8,'Medias Tejidas','Medias tejidas de lana',3,2,'medias-tejidas.jpg'),(9,'Oso Caramelo','Muñeco tejido de oso color caramelo',4,3,'oso-caramelo.jpg'),(10,'Pullover','Pullover tejido de lana',1,2,'pullover.jpg');
 /*!40000 ALTER TABLE `prenda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-06-27 16:27:10
+-- Dump completed on 2024-06-30 22:20:33
