@@ -1,5 +1,5 @@
 
-main {
+#prendas {
     width:100%;
     display: grid;
     row-gap: 3vh;
@@ -7,6 +7,16 @@ main {
     justify-content: center;
 
 }
+
+#cont_new {
+  width:100%;
+  padding-bottom: 6vh;
+  text-align: center;
+}
+
+/* #cont_new a {
+  margin: 0 auto;
+} */
 
 a {
   text-decoration: none;
@@ -33,7 +43,7 @@ main a div:hover {
 
 @media screen and (min-width: 650px) {
 
-  main {
+  #prendas {
      width:100%;
      grid-template-columns: auto auto;
      justify-content: space-around;
@@ -45,7 +55,7 @@ main a div:hover {
 
 @media screen and (min-width: 1024px) {
 
-    main {
+  #prendas {
      width:100%;
      grid-template-columns: auto auto auto;
      justify-content: space-around;
@@ -57,12 +67,17 @@ main a div:hover {
 
 @media screen and (min-width: 1441px) {
 
-  main {
+  #prendas {
       width:80%;
       margin-left: auto;
       margin-right: auto;
       grid-template-columns: auto auto auto auto;
      justify-content: space-around;
+  }
+
+  #cont_new {
+    width:80%;
+    margin: 0 auto;
   }
 
   .content-footer {

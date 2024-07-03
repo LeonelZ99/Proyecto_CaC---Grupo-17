@@ -25,14 +25,14 @@
 }
 
 /* Estilos para la imagen */
-.card-post {
-  transition: transform 2.3s ease; /* Agrega una transición suave a la propiedad transform */
-}
+/* .card-post { */
+/*   transition: transform 2.3s ease;  *//* Agrega una transición suave a la propiedad transform */
+/* } */
 
 /* Aplica la rotación horizontal cuando se pasa el mouse sobre la imagen */
-.card-post:hover {
+/* .card-post:hover {
   transform: rotateY(90deg); /* Rota la imagen horizontalmente 180 grados */
-}
+/*} */
 
 /*Corrige salto de 1px en menú al hace hover y no haber ningún borde en los enlaces*/
 
