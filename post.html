@@ -36,7 +36,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="container">
         <div class="post">
             <div>
                 <h2 id="nombrePrenda" class="titulo-img"></h2>
@@ -49,7 +49,7 @@
             </div>
         </div>
          <!-- Formulario de edición oculto -->
-         <div class="post" id="editFormContainer" style="display: none;">
+         <div id="editFormContainer" style="display: none;">
             <h2>Editar Prenda</h2>
             <form id="editForm" enctype="multipart/form-data">
                 <div class="mb-3">
@@ -72,7 +72,9 @@
                     <label for="editImagen" class="form-label">Imagen (opcional)</label>
                     <input type="file" class="form-control" id="editImagen" name="imagen" accept="image/*">
                 </div>
-                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                <div id="submit_edit">
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </div>
             </form>
     </main>
 

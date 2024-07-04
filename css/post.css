@@ -36,6 +36,21 @@
 
 /*Corrige salto de 1px en menú al hace hover y no haber ningún borde en los enlaces*/
 
+
+#submit_edit {
+
+  text-align: center;
+  margin-top: 6vh;
+
+}
+
+#editFormContainer h2 {
+
+  text-align: center;
+  margin-bottom: 6vh;
+
+}
+
 .menu li a {
 
   border-bottom: 1px solid;

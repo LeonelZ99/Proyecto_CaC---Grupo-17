@@ -108,6 +108,21 @@ main {
 
 }
 
+
+#submit_crear {
+
+  text-align: center;
+  margin-top: 6vh;
+
+}
+
+main h2 {
+
+  text-align: center;
+  margin-bottom: 6vh;
+
+}
+
 /* Estilos del footer */
 
 footer {
