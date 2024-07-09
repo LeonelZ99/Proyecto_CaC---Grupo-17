@@ -35,8 +35,7 @@ const PORT = 3000;
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    //password: "admin", //bd leonel
-    password: "Abcd!1234", //bd esteban
+    password: "admin",
     database: "web_tejidos"
 });
 
@@ -66,10 +65,16 @@ app.get("/prenda",(req,res) => {
     });
 });
 
-// Ruta para obtener por id
 app.get("/prenda/:id", (req, res) => {
     const prendaId = req.params.id;
-    const query = "SELECT * FROM prenda WHERE id_prenda = ?";
+    const query = `
+        SELECT p.id_prenda, p.nombre, p.descripcion, p.imagen,
+               p.categoria_id, c.nombre AS categoria_nombre,
+               p.autor_id, a.nombre AS autor_nombre, a.apellido AS autor_apellido
+        FROM prenda p
+        JOIN categoria c ON p.categoria_id = c.id_cat
+        JOIN autor a ON p.autor_id = a.id_autor
+        WHERE p.id_prenda = ?`;
     db.query(query, [prendaId], (err, results) => {
         if (err) {
             console.error("Error al ejecutar la consulta:", err);
@@ -83,6 +88,9 @@ app.get("/prenda/:id", (req, res) => {
         res.json(results[0]);
     });
 });
+
+
+
 
 // Ruta para crear una nueva prenda
 app.post('/prenda', upload.single('imagen'), (req, res) => {

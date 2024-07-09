@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('https://lapaciencia.alwaysdata.net/api/prenda')
+    fetch('http://localhost:3000/prenda')
         .then(response => response.json())
         .then(prendas => {
             const prendasContainer = document.getElementById('prendas');
+            prendasContainer.innerHTML = ''; // Limpia el contenedor antes de agregar las nuevas prendas
             prendas.forEach(prenda => {
                 const card = document.createElement('a');
                 card.href = `post.html?id=${prenda.id_prenda}`;
-                //card.className = 'col-md-4 mb-3';
+                card.className = 'col-md-4 mb-3'; // Asegúrate de usar las clases correctas para el estilo
                 card.innerHTML = `
-                    <div class="card text-center" style="width: 18rem">
+                    <div class="card text-center" style="width: 18rem;">
                         <img src="./img/${prenda.imagen}" class="card-img-top" alt="${prenda.nombre}">
                         <div class="card-body">
                             <h5 class="card-title">${prenda.nombre}</h5>
