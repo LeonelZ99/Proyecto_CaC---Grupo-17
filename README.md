@@ -1,4 +1,4 @@
-# Práctico Integrador / Comisión 24123 / Grupo 17 / Codo a Codo NodeJS
+# Trabajo Integrador Final / Comisión 24123 / Grupo 17 / Codo a Codo NodeJS
 
 El proyecto está disponible on-line en https://lapaciencia.alwaysdata.net/
 
